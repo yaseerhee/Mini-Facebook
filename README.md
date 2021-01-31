@@ -1,2 +1,2 @@
-# Mini-Facebook
-Creado con PHP 
+# RED SOCIAL: REALIZA POSTS
+
