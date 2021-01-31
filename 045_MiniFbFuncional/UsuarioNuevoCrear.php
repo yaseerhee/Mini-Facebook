@@ -1,21 +1,21 @@
 <?php
+// REQUERIMIENTOS
 require_once "_Varios.php";
 require_once "DAO.php";
 
-// TODO ...$_REQUEST["..."]...
+// OBTENEMOS LOS DATOS DEL FORMULARIO DE REGISTRO
 $identificador = $_REQUEST["identificador"];
 $contrasenna = $_REQUEST["contrasenna"];
 $nombre = $_REQUEST["nombre"];
 $apellidos = $_REQUEST["apellidos"];
-// TODO Intentar crear (añadir funciones en Varios.php para crear y tal).
-//
-// TODO Y redirigir a donde sea.
 
+// CREAMOS EL USUARIO 
 $arrayUsuario = DAO::crearUsuario($identificador, $contrasenna, $nombre, $apellidos);
 
-// TODO ¿Excepciones?
 if ($arrayUsuario) {
+    // SI EXISTE EL USUARIO NOS ENVÍA AL LOGIN
     redireccionar("SesionInicioFormulario.php");
 } else {
+    // EN CASO CONTRARIO DEVUELVE ERROR
     echo "FALTAN DATOS, no se ha creado";
 }

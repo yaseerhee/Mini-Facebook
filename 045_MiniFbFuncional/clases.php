@@ -1,13 +1,17 @@
 <?php
 
+
+// CLASE ABSTRACTA DE LA QUE EXTIENDEN TODAS LAS DEMÁS
 abstract class Dato
 {
 }
 
+// REUTILIZACIÓN DEL CÓDIGO, YA QUE AMBAS CLASES TIENEN ID´S
 trait Identificable
 {
     protected int $id;
 
+    //GETTER Y SETTER
     public function getId(): int
     {
         return $this->id;
@@ -19,8 +23,10 @@ trait Identificable
     }
 }
 
+// CLASE USUARIO
 class Usuario extends Dato
 {
+    //PROPIEDADES
     use Identificable;
 
     private $identificador;
@@ -28,6 +34,7 @@ class Usuario extends Dato
     private $nombre;
     private $apellidos;
 
+    //CONSTRUCTOR USUARIO
     public function __construct(int $id, $identificador, $contrasenna, $nombre, $apellidos)
     {
         $this->setId($id);
@@ -37,6 +44,7 @@ class Usuario extends Dato
         $this->setApellidos($apellidos);
     }
 
+    //GETTER Y SETTER
     public function getIdentificador(): string
     {
         return $this->identificador;
@@ -78,8 +86,11 @@ class Usuario extends Dato
         $this->apellidos = $apellidos;
     }
 }
+
+// CLASE PUBLICACION
 class Publicacion extends Dato
 {
+    // PROPIEDADES DE PUBLCACIÓN
     use Identificable;
 
     private string $fecha;
@@ -89,6 +100,7 @@ class Publicacion extends Dato
     private string $asunto;
     private string $contenido;
 
+    //CONSTRUCTOR PUBLICACION
     public function __construct(int $id, string $fecha, int $emisorID, $destinatarioID, $destacadaHasta, string $asunto, string $contenido)
     {
         $this->setId($id);
@@ -100,6 +112,7 @@ class Publicacion extends Dato
         $this->setContenido($contenido);
     }
 
+    //GETTER Y SETTER PUBLICACION
     public function getFecha(): string
     {
         return $this->fecha;
