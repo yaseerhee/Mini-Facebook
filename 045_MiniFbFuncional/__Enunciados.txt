@@ -1,0 +1,32 @@
+TRABAJO DEL 21 AL 31 DE ENERO
+
+El trabajo es INDIVIDUAL.
+Forma de entrega: crear carpeta 045_MiniFbFuncional dentro del repositorio personal e ir trabajando allí.
+Que esté ya subido para el lunes 1-feb a las 8:30.
+
+Tenéis este MiniFB que es mi solución a la parte básica de inicio de sesión, cookies y demás, pero sin tener funcionalidad como tal.
+
+Se pide:
+0. Aseguraos de que tenéis la última versión de la BD, adjunta aquí mismo. (v)
+1. Convertir el MiniFb a modo DAO. Algunas de las funciones de usuarios y tal podéis copiarlas de AgendaDAO
+   (tirad por favor de mi versión de AgendaDAO; sé que da más pereza una solución ajena que una propia pero
+   creo que la mía está bastante bien organizada y eso es importante). (v)
+2. Hasta ahora hemos trabajado sobre la tabla Usuario principalmente. Sin embargo, teníamos una tabla Publicacion
+   que no hemos utilizado, y ahora utilizaremos las dos.
+3. Completa el script MuroVerGlobal.php. Aquí deben aparecer todas las publicaciones que los usuarios publican "al viento"
+   (destinatarioId = null). Ordenados por fecha. Publicaciones más nuevas, arriba.
+4. Completa el script MuroVerDe.php. Aquí mostraremos las publicaciones que hayan sido publicadas para el usuario indicado como parámetro.
+   Si no indican nada, ese usuario seré yo y por tanto veré las publicaciones dirigidas a mí. Si indican otra cosa, veo las publicaciones
+   dirigidos a ese usuario. Lo de "Dirigido a" lo indica el campo "destinatarioId". Ordenadas por fecha. Más nuevas, arriba.
+5. Se podrán crear publicaciones tanto desde el muro Global como desde el propio o desde el muro de otra persona. Para ello, se pondrá un
+   formulario sencillo encima de la zona en la que mostramos las publicaciones. En el global publicaré "al viento" (destinatarioId = null)
+   en mi muro publicaré dirigido a mí y en el muro de otro publicaré dirigido a él. Los tres formularios tendrán como action
+   PublicacionNuevaCrear.php, y ese script creará la publicación según corresponda.
+6. (Opcional) Haz que las publicaciones destacadas (destacadaHasta) se muestren en negrita.
+7. (Opcional) Pon la posibilidad de eliminar las publicaciones que he publicado yo y las que otros han publicado en mi muro.
+7. (Opcional) Completa la página de registro de usuario. Si la creaste en su día, intégrala en esta solución (fue opcional).
+
+ * Recuerda hacerlo *todo* en "modo DAO". No se trata solo de que funcione sino, también, de ser capaz de aplicar este modelo.
+   En el futuro, en cualquier trabajo, se llega a un proyecto en el que se hacen las cosas de determinada manera y hay que adaptarse,
+   aunque no nos guste o aunque sepamos (o creamos saber) hacerlo de una manera mejor. Es más importante la homogeneidad que la posible
+   mejora que aporte mi manera de hacer las cosas, si mi manera se va a aplicar solo a las partes del proyecto que haga yo. Es un caos.

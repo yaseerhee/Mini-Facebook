@@ -1,0 +1,11 @@
+El MiniFB tiene implementada toda la parte de iniciar sesión, tanto sin cookie de recordar como con ella.
+No tiene implementado nada relativo a la propia funcionalidad de la app, pero tiene ya la tabla en la BD así que podría hacerse.
+No hay flecos sueltos (cosas a medias).
+
+
+
+TODO: CREAR OBJETO PUBLICACION
+TODO: 
+
+
+
